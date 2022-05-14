@@ -52,12 +52,6 @@ Console.WriteLine("Задача 50. Напишите программу, кот�
 Console.WriteLine("\nEnter number of element\n");
 int num = int.Parse(Console.ReadLine());
 int[,] IntArray = MyExample.GetIntTwoDimentionArray(5, 11);
-<<<<<<< HEAD
-=======
-
-MyExample.PrintIntTwoDimentionArray(IntArray);
->>>>>>> 8f625f92fd9e9da44d89f3690760add0729f45a5
-
 MyExample.PrintIntTwoDimentionArray(IntArray, 3, 8);
 if (num < IntArray.GetLength(0) * IntArray.GetLength(1))
     Console.WriteLine(IntArray[num / IntArray.GetLength(1), num % IntArray.GetLength(1)]);
@@ -82,10 +76,6 @@ for (int i = 0; i < IntArray.GetLength(1); i++)
     {
         avarage += IntArray[j, i];        
     }
-<<<<<<< HEAD
     Console.WriteLine($"Avarage of {i} colomn {avarage / Convert.ToDouble(IntArray.GetLength(0)):f2}; ");
-=======
-    Console.Write($"{avarage / Convert.ToDouble(IntArray.GetLength(0)):f2}; ");
->>>>>>> 8f625f92fd9e9da44d89f3690760add0729f45a5
 }
 Console.ReadKey( );
