@@ -16,7 +16,7 @@ for (int i = 0; i < m; i++)
 {
     for (int j = 0; j < n; j++)
     {
-        Array[i, j] = Convert.ToDouble(random.Next(100, 1000)) / 10;
+        Array[i, j] = random.Next(100, 1000) + random.NextDouble();
     }
 }
 
@@ -25,7 +25,7 @@ for (int i = 0; i < m; i++)
 {
     for (int j = 0; j < n; j++)
     {
-        Console.Write(Array[i, j] + " ");
+        Console.Write($"{Array[i, j]:f2} ");
     }
     Console.WriteLine();
 }
@@ -58,7 +58,26 @@ if (num < IntArray.GetLength(0) * IntArray.GetLength(1))
 else 
     Console.WriteLine("Такого числа в массиве нет");
 
-Console.WriteLine();
+
+Console.WriteLine("\nЗадача 50.1. \"Ищем его по массиву и просто выдаем ответ, есть это число или нет\"\n\\\n");
+bool isNumInArray = false;
+for (int i = 0; i < IntArray.GetLength(0); i++)
+{
+    for (int j =0; j < IntArray.GetLength(1); j++)
+    {
+        if (IntArray[i, j] == num)
+        {
+            isNumInArray = true;
+            break;
+        }
+    }
+}
+Console.WriteLine(!isNumInArray?$"Число {num} есть в массиве\n":$"Числа {num} нет в массиве\n");
+
+
+
+
+
 
 
 //Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
@@ -68,6 +87,8 @@ Console.WriteLine();
 //5 9 2 3
 //8 4 2 4
 //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+Console.WriteLine("Задача 52. Задайте двумерный массив из целых чисел.\nНайдите среднее арифметическое элементов в каждом столбце.\n");
 
 double avarage = 0;
 for (int i = 0; i < IntArray.GetLength(1); i++)
